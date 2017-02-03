@@ -30,12 +30,12 @@
                     
                     <h1>Login</h1>
                     <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                        <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                        <input type="email" class="form-control" name="email_nm" value="{{ old('email') }}" placeholder="Email">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                        @if ($errors->has('email'))
-                            <span class="help-block">
-                      <strong>{{ $errors->first('email') }}</strong>
-                </span>
+                        @if ($errors->has('email_nm'))
+                            <div class="alert alert-danger">
+                                {{ $errors->first('email_nm') }}
+                            </div>
                         @endif
                     </div>
                     
@@ -43,9 +43,9 @@
                         <input type="password" class="form-control" placeholder="Password" name="password">
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                         @if ($errors->has('password'))
-                            <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-                </span>
+                            <div class="alert alert-danger">
+                                {{ $errors->first('password') }}
+                            </div>
                         @endif
                     
                     </div>
@@ -65,7 +65,6 @@
                         <br />
                         
                         <div>
-                            <h1></h1>
                             <p>Bsculpted 2016 All Rights Reserved</p>
                         </div>
                     </div>

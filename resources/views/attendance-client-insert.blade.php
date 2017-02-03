@@ -8,7 +8,7 @@
 @section('main_container')
 
     <!-- page content -->
-    <div class="right_col" role="main">
+    <div>
         @include('includes/attendance-widget-input')
     </div>
     <!-- /page content -->

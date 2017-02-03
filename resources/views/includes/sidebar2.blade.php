@@ -1,15 +1,15 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="{{ url('/') }}" class="site_title"><span>Dashboard</span></a>
-            <div class="menu_section">
-                <div class="clearfix"></div>
-                <ul class="nav side-menu">
-                    <li>
-                        <a href="{{ url('/') }}"> <i class="fa fa-home"></i>Home</a>
-                    </li>
-                </ul>
-            </div>
+            <a href="{{ url('/') }}" class="site_title"><span>Back to Dashboard</span></a>
+            {{--<div class="menu_section">--}}
+                {{--<div class="clearfix"></div>--}}
+                {{--<ul class="nav side-menu">--}}
+                    {{--<li>--}}
+                        {{--<a href="{{ url('/') }}"> <i class="fa fa-home"></i>Home</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
 
         <div class="clearfix"></div>

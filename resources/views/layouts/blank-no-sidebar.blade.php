@@ -25,12 +25,13 @@
 </head>
 
 <body class="nav-md">
-<div class="container body">
-    <div class="main_container">
-        @include('includes/sidebar2')
+<div class="container">
+    <div class="panel panel-default col-md-6 col-sm-6 col-xs-6 col-md-offset-3">
+        <div class="panel-body">
+            @include('includes/sidebar2')
 
-        @yield('main_container')
-
+            @yield('main_container')
+        </div>
     </div>
 </div>
 

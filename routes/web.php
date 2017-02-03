@@ -14,3 +14,13 @@
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/', 'HomeController@index');
+
+/**
+ * Dashboard sidebar Routes
+ */
+Route::get('/attendance','AttendanceController@index');
+Route::get('/attendance/addToClass','AttendanceController@addToClass');
+Route::get('/attend','AttendanceController@index');
+
+
+Route::get('/search/autocomplete', 'SearchController@autocomplete');

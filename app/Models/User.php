@@ -8,6 +8,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 	use Notifiable;
+
+    const CREATED_AT = 'created';
+    const UPDATED_AT = 'modified';
+
+    /**
+     * The table associated with the model.
+     * @var string
+     */
+    protected $table = 'clients';
+
+    /**
+     *  Setting primary key
+     * @var string
+     */
+    protected $primaryKey = 'client_id';
 	
     /**
      * The attributes that are mass assignable.
@@ -15,7 +30,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_nm', 'last_nm', 'email_nm', 'password',
     ];
 
     /**

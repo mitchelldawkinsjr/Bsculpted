@@ -29,24 +29,35 @@
                 
                 <h1>Create Account</h1>
                 
-                <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name">
+                <div class="form-group has-feedback{{ $errors->has('first_nm') ? ' has-error' : '' }}">
+                    <input type="text" class="form-control" name="first_nm" value="{{ old('first_nm') }}" placeholder="First Name">
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     
-                    @if ($errors->has('name'))
+                    @if ($errors->has('first_nm'))
                         <span class="help-block">
-                  <strong>{{ $errors->first('name') }}</strong>
+                  <strong>{{ $errors->first('first_nm') }}</strong>
+                </span>
+                    @endif
+                </div>
+
+                <div class="form-group has-feedback{{ $errors->has('last_nm') ? ' has-error' : '' }}">
+                    <input type="text" class="form-control" name="last_nm" value="{{ old('name') }}" placeholder="Last Name">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+                    @if ($errors->has('last_nm'))
+                        <span class="help-block">
+                  <strong>{{ $errors->first('last_nm') }}</strong>
                 </span>
                     @endif
                 </div>
                 
-                <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <div class="form-group has-feedback{{ $errors->has('email_nm') ? ' has-error' : '' }}">
+                    <input type="email" class="form-control" name="email_nm" value="{{ old('email_nm') }}" placeholder="Email">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     
-                    @if ($errors->has('email'))
+                    @if ($errors->has('email_nm'))
                         <span class="help-block">
-                  <strong>{{ $errors->first('email') }}</strong>
+                  <strong>{{ $errors->first('email_nm') }}</strong>
                 </span>
                     @endif
                 </div>
@@ -79,17 +90,14 @@
                 <div class="clearfix"></div>
                 
                 <div class="separator">
-                    <p class="change_link">Already a member ?
+                    <p class="change_link">Already a client?
                         <a href="{{ url('/login') }}" class="to_register"> Log in </a>
                     </p>
                     
                     <div class="clearfix"></div>
                     <br />
                     
-                    <div>
-                        <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                        <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                    </div>
+
                 </div>
             </form>
         </section>

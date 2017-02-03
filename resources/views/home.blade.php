@@ -44,8 +44,8 @@
     <!-- /page content -->
 
     <!-- footer content -->
-    <footer>
-        <div class="clearfix"></div>
-    </footer>
+    {{--<footer>--}}
+        {{--<div class="clearfix"></div>--}}
+    {{--</footer>--}}
     <!-- /footer content -->
 @endsection

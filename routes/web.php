@@ -24,3 +24,12 @@ Route::get('/attend','AttendanceController@index');
 
 
 Route::get('/search/autocomplete', 'SearchController@autocomplete');
+
+/**
+ * Ajax
+ */
+Route::get('/attend-delete', 'AttendanceController@deleteAttendance');
+Route::get('/class-type-delete', 'AttendanceController@deleteClassType');
+Route::get('/attend-delete-success', 'AttendanceController@deleteSuccess');
+
+Route::get('/attendance/add-class','AttendanceController@AddClass');

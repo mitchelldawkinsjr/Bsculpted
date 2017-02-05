@@ -12,15 +12,16 @@
 
         <script src="{{ asset("js/jquery.min.js") }}"></script>
 
-
         <!-- Bootstrap -->
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
-
-
+        <!-- ICheck Style -->
+        <link href="{{ asset("css/green.css") }}" rel="stylesheet">
+        <!-- DataTables-bs-.net Style -->
+        <link href="{{ asset("css/dataTables.bootstrap.min.css") }}" rel="stylesheet">
         @stack('stylesheets')
 
     </head>
@@ -44,7 +45,17 @@
         <script src="{{ asset("js/bootstrap.min.js") }}"></script>
         <!-- Custom Theme Scripts -->
         <script src="{{ asset("js/gentelella.min.js") }}"></script>
-
+        <!-- Icheck Scripts -->
+        <script src="{{ asset("js/icheck.js") }}"></script>
+        <script src="{{ asset("js/icheck.min.js") }}"></script>
+        <!-- Datatables Scripts -->
+        <script src="{{ asset("js/jquery.dataTables.js") }}"></script>
+        <script src="{{ asset("js/jquery.dataTables.min.js") }}"></script>
+        <!-- DataTables-bs Scripts -->
+        <script src="{{ asset("js/dataTables.bootstrap.js") }}"></script>
+        <script src="{{ asset("js/dataTables.bootstrap.min.js") }}"></script>
+        <!-- Public Scripts -->
+        <script src="{{ asset("js/public.js") }}"></script>
         @stack('scripts')
 
     </body>

@@ -14,7 +14,6 @@
     <!-- /page content -->
 
     <!-- footer content -->
-    <footer>
-    </footer>
+    @include('includes/footer');
     <!-- /footer content -->
 @endsection

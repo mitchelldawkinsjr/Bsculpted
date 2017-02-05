@@ -29,8 +29,8 @@
                     <li>
                         <a><i class="fa fa-laptop"></i>Attendance<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{ url('/attendance') }}">Trainer Insert</a></li>
-                            <li><a href="{{ url('/attend') }}">Client Insert</a></li>
+                            <li><a href="{{ url('/attendance') }}">Trainer View</a></li>
+                            <li><a href="{{ url('/attend') }}">Client View</a></li>
                         </ul>
                     </li>
                 </ul>

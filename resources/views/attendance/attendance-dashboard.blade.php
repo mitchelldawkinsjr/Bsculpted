@@ -1,15 +1,14 @@
 @extends('layouts.blank')
 
 @push('stylesheets')
-    <!-- Example -->
-    <!--<link href=" <link href="{{ asset("css/myFile.min.css") }}" rel="stylesheet">" rel="stylesheet">-->
+<!-- Example -->
+<!--<link href=" <link href="{{ asset("css/myFile.min.css") }}" rel="stylesheet">" rel="stylesheet">-->
 @endpush
 
 @section('main_container')
 
     <!-- page content -->
     <div class="right_col" role="main">
-
         <div class="row top_tiles">
             <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="tile-stats">
@@ -51,9 +50,7 @@
         @include('attendance.includes.top-client')
         @include('attendance.includes.attendance-by-class')
         @include('attendance.includes.attendance-graph')
-
     </div>
-    <!-- /page content -->
 
     <!-- footer content -->
     <footer>
@@ -63,4 +60,5 @@
         <div class="clearfix"></div>
     </footer>
     <!-- /footer content -->
+
 @endsection

@@ -18,18 +18,24 @@ Route::get('/', 'HomeController@index');
 /**
  * Dashboard sidebar Routes
  */
-Route::get('/attendance','AttendanceController@index');
-Route::get('/attendance/addToClass','AttendanceController@addToClass');
-Route::get('/attend','AttendanceController@index');
+Route::get('/attendance/dashboard','AttendanceController@index');
+Route::get('/attendance/client-insert','AttendanceController@index');
+Route::get('/attendance/edit','AttendanceController@edit');
 
-
-Route::get('/search/autocomplete', 'SearchController@autocomplete');
 
 /**
- * Ajax
+ * Basic Action Routes
  */
-Route::get('/attend-delete', 'AttendanceController@deleteAttendance');
-Route::get('/class-type-delete', 'AttendanceController@deleteClassType');
-Route::get('/attend-delete-success', 'AttendanceController@deleteSuccess');
+Route::get('/search/autocomplete', 'SearchController@autocomplete');
+Route::get('/attendance/delete', 'AttendanceController@deleteAttendance');
+Route::get('/attendance/class-type-delete', 'AttendanceController@deleteClassType');
+Route::get('/attendance/add-class-type','AttendanceController@addClassType');
 
-Route::get('/attendance/add-class','AttendanceController@AddClass');
+
+/**
+ * Ajax Routes
+ */
+
+Route::get('/attendance/delete-success', 'AttendanceController@deleteSuccess');
+Route::get('/attendance/graph', 'AttendanceController@graphNumbers');
+Route::get('/attendance/addToClass','AttendanceController@addToClass');

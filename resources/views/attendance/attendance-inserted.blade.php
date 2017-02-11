@@ -9,7 +9,7 @@
 
     <!-- page content -->
     <div>
-        @include('includes/attendance-widget-success')
+        @include('attendance.includes.attendance-widget-success')
     </div>
     <!-- /page content -->
 

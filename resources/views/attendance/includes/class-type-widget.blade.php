@@ -43,7 +43,7 @@
         <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
             <div class="dt-buttons btn-group">
                 <a id="btn-add" class="btn btn-default buttons-html5 btn-sm" data-toggle="modal" data-target="#addClass" aria-controls="datatable-buttons"><span>Add Class Type</span></a>
-                <a  class="btn-del btn btn-default buttons-html5 btn-sm" tabindex="0" aria-controls="datatable-buttons" href="#"><span>Delete Selected</span></a>
+                <a id="btn-del2" class="btn-del btn btn-default buttons-html5 btn-sm" tabindex="0" aria-controls="datatable-buttons" href="#"><span>Delete Selected</span></a>
             </div>
         </div>
         <div class="modal fade" id="addClass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -55,7 +55,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="/attendance/add-class" method="get">
+                    <form action="/attendance/add-class-type" method="get">
                         <div class="modal-body">
 
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Class Name<span class="required">*</span></label>
@@ -73,21 +73,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    var message = $('.ui-pnotify-text').html().split(',');
-    var explode = function(){
-        $('#notify').hide();
-    };
-    if(message[0] == 'Success')
-    {
-        $('.ui-pnotify-text').html((message[2]+' was added to '+(message[1]+' class.')));
-        $('#notify').show().setTimeout(explode, 2000);
-    }else if(message[0] == 'Removal')
-    {
-        $('.ui-pnotify-text').html(message[1]);
-        $('#notify').show();
-    }else{
-        $('#notify').hide();
-    }
-</script>

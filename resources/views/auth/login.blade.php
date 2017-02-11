@@ -29,8 +29,8 @@
                     {!! csrf_field() !!}
                     
                     <h1>Login</h1>
-                    <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                        <input type="email" class="form-control" name="email_nm" value="{{ old('email') }}" placeholder="Email">
+                    <div class="form-group has-feedback {{ $errors->has('email_nm') ? ' has-error' : '' }}">
+                        <input type="email" class="form-control" name="email_nm" value="{{ old('email_nm') }}" placeholder="Email">
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                         @if ($errors->has('email_nm'))
                             <div class="alert alert-danger">

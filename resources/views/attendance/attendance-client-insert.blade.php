@@ -9,11 +9,20 @@
 
     <!-- page content -->
     <div>
-        @include('includes/attendance-widget-input')
+        @include('attendance.includes.attendance-widget-input')
+            <ol>
+                <li>Begin typing client name</li>
+                <li>Auto-Complete will begin to search after first 3 letters</li>
+                <li>Once name appears select it and add this person to a class</li>
+
+            </ol>
+        @if(Session::has('message'))
+            {!! Session::get('message') !!}
+        @endif
     </div>
     <!-- /page content -->
 
     <!-- footer content -->
-    @include('includes/footer');
+    @include('includes/footer')
     <!-- /footer content -->
 @endsection

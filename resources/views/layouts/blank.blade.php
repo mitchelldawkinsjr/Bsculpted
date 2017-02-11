@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
     <head>
+        {{--<meta name="csrf-token" content="{{ csrf_token() }}">--}}
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <!-- Meta, title, CSS, favicons, etc. -->
@@ -54,6 +55,9 @@
         <!-- DataTables-bs Scripts -->
         <script src="{{ asset("js/dataTables.bootstrap.js") }}"></script>
         <script src="{{ asset("js/dataTables.bootstrap.min.js") }}"></script>
+        <!-- Flot Scripts -->
+        <script src="{{ asset("js/jquery.flot.js") }}"></script>
+        <script src="{{ asset("js/jquery.flot.time.js") }}"></script>
         <!-- Public Scripts -->
         <script src="{{ asset("js/public.js") }}"></script>
         @stack('scripts')
@@ -61,3 +65,4 @@
     </body>
 </html>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="https://js.pusher.com/3.1/pusher.min.js"></script>

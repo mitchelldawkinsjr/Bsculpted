@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 class Attendance extends Model
 {
     const CREATED_AT = 'created';
+
     const UPDATED_AT = 'modified';
 
     protected $table = 'attendance';

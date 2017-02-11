@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {{--<meta name="csrf-token" content="{{ csrf_token() }}">--}}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -47,3 +48,11 @@
 </body>
 </html>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<style>
+    .ui-helper-hidden-accessible{
+        color: #fff;
+        font-size: 2em;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>

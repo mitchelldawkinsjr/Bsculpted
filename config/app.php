@@ -122,6 +122,7 @@ return [
     */
 
     'providers' => [
+        App\Providers\HelperServiceProvider::class,
 
         /*
          * Laravel Framework Service Providers...

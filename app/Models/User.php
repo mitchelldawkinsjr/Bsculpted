@@ -10,6 +10,7 @@ class User extends Authenticatable
 	use Notifiable;
 
     const CREATED_AT = 'created';
+
     const UPDATED_AT = 'modified';
 
     /**

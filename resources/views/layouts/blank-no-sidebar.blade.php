@@ -27,7 +27,7 @@
 
 <body class="nav-md">
 <div class="container">
-    <div class="panel panel-default col-md-6 col-sm-6 col-xs-6 col-md-offset-3">
+    <div style="margin:0 15px 0 15px;" class="panel panel-default col-md-6 col-sm-11 col-xs-11 col-md-offset-3">
         <div class="panel-body">
             @include('includes/sidebar2')
 

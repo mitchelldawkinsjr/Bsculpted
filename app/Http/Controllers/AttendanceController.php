@@ -117,7 +117,7 @@ class AttendanceController
                     $className = $class->class_name;
                 }
             }else{
-                return redirect()->back()->with('message', statusHelper::format_message('error','There was an error while adding the client to a class. Please refresh the page and try again.'));
+                return redirect()->back()->with('message', statusHelper::format_message('error','There was an error while adding the client to a class. Please try again.'));
             }
 
             Attendance::create([

@@ -22,7 +22,7 @@ class statusHelper
         setTimeout(explode, 4000);
 //        </script>
         <div class="col-lg-10 col-md-10 col-sm-10">
-            <div class="alert alert-'.$type.' ui-pnotify" aria-live="assertive" aria-role="alertdialog" id="notify" style="position: fixed; width: 80%; z-index: 1; top: 20px; right: 20px; cursor: auto;">
+            <div class="alert alert-'.$type.' ui-pnotify" aria-live="assertive" aria-role="alertdialog" id="notify" style="position: fixed; z-index: 1; top: 20px; right: 20px; cursor: auto;">
                 <div class="alert ui-pnotify-container ui-pnotify-shadow" role="alert" style="min-height: 16px;">
                     <div class="ui-pnotify-closer" aria-role="button" tabindex="0" title="Close" style="cursor: pointer; visibility: hidden; display: none;">
                         <span class="glyphicon glyphicon-remove"></span>
@@ -40,6 +40,17 @@ class statusHelper
                 </div>
             </div>
         </div>
+        <style>
+        #notify{
+            width:40%;
+        }
+        @media screen and (max-width: 550px) {
+        #notify {
+             width:80%;
+            }
+        }
+        </style>
+        
         ';
     }
 }

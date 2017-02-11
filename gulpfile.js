@@ -68,7 +68,15 @@ elixir(function(mix) {
     // Js files
     mix.copy('vendor/bower_components/datatables.net/js/jquery.dataTables.js', 'public/js/jquery.dataTables.js');
     mix.copy('vendor/bower_components/datatables.net/js/jquery.dataTables.min.js', 'public/js/jquery.dataTables.min.js');
+    
 
+    /*********************/
+    /* Flot-js    */
+    /*******************/
+
+    // Js files
+    mix.copy('vendor/bower_components/flot/jquery.flot.js', 'public/js/jquery.flot.js');
+    mix.copy('vendor/bower_components/flot/jquery.flot.time.js', 'public/js/jquery.flot.time.js');
 
     /**************/
     /* Copy Fonts */

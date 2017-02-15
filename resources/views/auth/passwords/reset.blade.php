@@ -27,6 +27,9 @@
     
     <div class="login_wrapper">
         <div class="animate form login_form">
+
+            <img src="http://bsculpted.com/home/storage/logo-smaller.png" width="175"  alt="logo"/>
+
             <section class="login_content">
                 @if (session('status'))
                     <div class="alert alert-success">
@@ -80,13 +83,12 @@
                         <p class="change_link">You have a password ?
                             <a href="{{ url('/login') }}" class="to_register"> Log in </a>
                         </p>
-                        
+
                         <div class="clearfix"></div>
                         <br />
-                        
+
                         <div>
-                            <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                            <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                            <p>© 2017 BSculpted, LLC All Rights Reserved</p>
                         </div>
                     </div>
                 </form>

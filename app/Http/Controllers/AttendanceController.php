@@ -321,6 +321,13 @@ class AttendanceController
             ->orderBy('count','desc')
             ->limit(1)
             ->get();
+        if($top->count() == 0)
+        {
+            $class = new \stdClass();
+            $class->class_name ='N/A';
+            $class->count = 0;
+            $top->push($class);
+        }
         return $top;
     }
 

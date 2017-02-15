@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
     <div class="x_panel">
         <div class="x_title">
             <h2><?php echo date('F');?> Attendance<small>by class </small> </h2>

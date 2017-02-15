@@ -28,9 +28,16 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home',['attendanceByClass'=>$this->attendanceByClass(),'topClass'=>$this->topAttendedClass(),'topClients' => $this->listTopAttendeesForMonth(),'totalClients' => $this->totalClientsCrated(),'totalClasses' => $this->totalClassesAttendedThisMonth()]);
+
+        return view('home', [
+            'attendanceByClass'=>$this->attendanceByClass(),
+            'topClass'=>$this->topAttendedClass(),
+            'topClients' => $this->listTopAttendeesForMonth(),
+            'totalClients' => $this->totalClientsCrated(),
+            'totalClasses' => $this->totalClassesAttendedThisMonth()
+        ]);
     }
 
     public function totalClientsCrated()

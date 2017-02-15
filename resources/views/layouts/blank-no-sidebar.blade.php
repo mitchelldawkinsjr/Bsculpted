@@ -5,6 +5,8 @@
     {{--<meta name="csrf-token" content="{{ csrf_token() }}">--}}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+    <link rel="shortcut icon" href="http://bsculpted.com/home/storage/logo-smaller.png" type="image/x-icon">
+
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

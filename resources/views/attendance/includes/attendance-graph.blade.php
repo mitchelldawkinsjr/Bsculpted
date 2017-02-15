@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="x_panel">
             <div class="x_title">
                 <h2>Yearly Class Attendance<small>Month By Month</small></h2>

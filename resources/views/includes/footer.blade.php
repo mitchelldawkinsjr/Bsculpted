@@ -1,6 +1,6 @@
 <footer>
     <div class="pull-right">
-        All Rights Reserved Bsculpted LLC 2016
+        © 2017 BSculpted, LLC All Rights Reserved
     </div>
     <div class="clearfix"></div>
 </footer>

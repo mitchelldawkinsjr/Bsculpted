@@ -24,6 +24,9 @@
 <div class="login_wrapper">
     <div class="animate form login_form">
         <section class="login_content">
+
+            <img src="http://bsculpted.com/home/storage/logo-smaller.png" width="175"  alt="logo"/>
+
             <form method="post" action="{{ url('/register') }}">
                 {!! csrf_field() !!}
                 

@@ -10,7 +10,7 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <div class="row top_tiles">
-            <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-female"></i></div>
                     <div class="count">{{$totalClients}}</div>
@@ -18,7 +18,7 @@
                     <p>Sign Up More </p>
                 </div>
             </div>
-            <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-star"></i></div>
                     <div class="count">{{$totalClasses}}</div>
@@ -26,7 +26,7 @@
                     <p><?php echo date('F');?></p>
                 </div>
             </div>
-            <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-trophy"></i></div>
                     <div class="count">
@@ -55,7 +55,7 @@
     <!-- footer content -->
     <footer>
         <div class="pull-right">
-            All Rights Reserved BSculpted LLC 2016
+            © 2017 BSculpted, LLC All Rights Reserved
         </div>
         <div class="clearfix"></div>
     </footer>

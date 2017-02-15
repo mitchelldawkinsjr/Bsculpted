@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Gentellela Alela! | </title>
+    <title>BSculpted Login</title>
     
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -25,6 +25,10 @@
     <div class="login_wrapper">
         <div class="animate form login_form">
             <section class="login_content">
+
+                <img src="http://bsculpted.com/home/storage/logo-smaller.png" width="175"  alt="logo"/>
+
+
                 <form method="post" action="{{ url('/login') }}">
                     {!! csrf_field() !!}
                     
@@ -65,7 +69,7 @@
                         <br />
                         
                         <div>
-                            <p>Bsculpted 2016 All Rights Reserved</p>
+                            <p>© 2017 BSculpted, LLC All Rights Reserved</p>
                         </div>
                     </div>
                 </form>

@@ -28,6 +28,20 @@ class LoginController extends Controller
 	public $redirectTo = '/attendance/dashboard';
 
 	/**
+     * todo :: fix issue with login on production
+     */
+
+    public function login()
+    {
+        $email = $_POST['email_nm'];
+        $password = $_POST['password'];
+        if(Auth::attempt(['email_nm'=> $email , 'password' => $password ]))
+        {
+            return redirect()->to('/attendance/dashboard');
+        }
+    }
+
+	/**
 	 * Create a new controller instance.
 	 *
 	 * @return void

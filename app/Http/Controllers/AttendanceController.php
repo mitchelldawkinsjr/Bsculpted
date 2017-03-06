@@ -292,8 +292,12 @@ class AttendanceController
      * @return mixed
      */
     public function attendanceByClass(){
-        $startOfCurrentMonth = date('Y-01-m 00:00:00');
-        $endOfCurrentMonth = date('Y-t-m 12:59:59');
+        $timestamp = strtotime("first day of");
+        $startOfCurrentMonth  = date("Y-m-d 00:00:00", $timestamp);
+
+        $timestampEnd = strtotime("last day of");
+        $endOfCurrentMonth = date("Y-m-d 00:00:00", $timestampEnd);
+
         $byClass = DB::table('attendance')
             ->select(DB::raw('count(attendance.class_type_id) as count, class_name'))
             ->join('class_types','class_types.class_type_id','=','attendance.class_type_id')
@@ -310,8 +314,12 @@ class AttendanceController
      */
     public function topAttendedClass()
     {
-        $startOfCurrentMonth = date('Y-01-m 00:00:00');
-        $endOfCurrentMonth = date('Y-t-m 12:59:59');
+        $timestamp = strtotime("first day of");
+        $startOfCurrentMonth  = date("Y-m-d 00:00:00", $timestamp);
+
+        $timestampEnd = strtotime("last day of");
+        $endOfCurrentMonth = date("Y-m-d 00:00:00", $timestampEnd);
+
         $top = DB::table('attendance')
             ->select(DB::raw('count(attendance.class_type_id) as count, class_name'))
             ->join('class_types','class_types.class_type_id','=','attendance.class_type_id')
@@ -343,8 +351,12 @@ class AttendanceController
      */
     public function totalClassesAttendedThisMonth()
     {
-        $startOfCurrentMonth = date('Y-01-m 00:00:00');
-        $endOfCurrentMonth = date('Y-t-m 12:59:59');
+        $timestamp = strtotime("first day of");
+        $startOfCurrentMonth  = date("Y-m-d 00:00:00", $timestamp);
+
+        $timestampEnd = strtotime("last day of");
+        $endOfCurrentMonth = date("Y-m-d 00:00:00", $timestampEnd);
+
         $classesTotal = Attendance::all()->where(['created'],'>',$startOfCurrentMonth)->where(['created'],'<',$endOfCurrentMonth);
         return $classesTotal->count();
     }

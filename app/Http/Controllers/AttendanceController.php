@@ -364,11 +364,10 @@ class AttendanceController
     public function graphNumbers()
     {
         $byClassMonth = DB::table('attendance')
-            ->select(DB::raw('count(attendance.class_type_id) as count, month(attendance.created) as month, class_name'))
+            ->select(DB::raw('count(attendance.class_type_id) as count, month(attendance.created) as month'))
             ->join('class_types','class_types.class_type_id','=','attendance.class_type_id')
-            ->groupBy('month')
             ->get();
-        return response()->json(['data' => $byClassMonth]);
+        return response()->json([$byClassMonth]);
     }
 
 }

@@ -14,6 +14,7 @@
         <title>Bsculpted Dashboard</title>
 
         <script src="{{ asset("js/jquery.min.js") }}"></script>
+        <script src="{{ asset("js/beep.js") }}"></script>
 
         <!-- Bootstrap -->
         <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">

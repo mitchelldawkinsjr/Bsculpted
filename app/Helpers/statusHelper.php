@@ -11,16 +11,27 @@ namespace App\StatusHelper;
 class statusHelper
 {
 
-    public static function format_message($type,$message)
+    public static function format_message($type,$message,$data = null,$statusUpdates=true)
     {
-        $type == 'success' ? $title = 'Success' : $title = 'Error';
-        return '
-          <script>
-        function explode(){
-            $(\'.alert\').fadeOut();
+        $msg=null;
+        $script=null;
+        if($data || $statusUpdates)
+        {
+            $type == 'success' ? $title = 'Success' : $title = 'Error';
+        } else {
+            $type == 'success' ? $title = 'Success' : $title = 'Error';
+            $title == 'Success' ? $type = 'success-orange': $type = 'error';
+            $title = 'Payment Issues';
+            $msg = '<h2> This client\'s last payment is outside of 31 days. If they are on auto billing please verify their card information.</h2>';
+            $script = '<script type="text/javascript">new Beep(22050).play(500, .5 , [Beep.utils.amplify(8000)]);</script>';
         }
-        setTimeout(explode, 4000);
-//        </script>
+        return '
+        <script>
+            function explode(){
+                $(\'.alert\').fadeOut();
+            }
+            setTimeout(explode, 10000);
+        </script>'.$script.'
         <div class="col-lg-10 col-md-10 col-sm-10">
             <div class="alert alert-'.$type.' ui-pnotify" aria-live="assertive" aria-role="alertdialog" id="notify" style="position: fixed; z-index: 1; top: 20px; right: 20px; cursor: auto;">
                 <div class="alert ui-pnotify-container ui-pnotify-shadow" role="alert" style="min-height: 16px;">
@@ -35,7 +46,7 @@ class statusHelper
                     </div>
                     <h3 class="ui-pnotify-title">'. $title .'</h3>
                     <div class="ui-pnotify-text" aria-role="alert"> 
-                        '. $message .' 
+                        '.  $msg . ' <br/> ' . $message .' 
                     </div>
                 </div>
             </div>
@@ -49,8 +60,7 @@ class statusHelper
              width:80%;
             }
         }
-        </style>
-        
+        </style>   
         ';
     }
 }

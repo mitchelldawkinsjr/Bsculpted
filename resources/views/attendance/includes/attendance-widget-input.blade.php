@@ -10,7 +10,6 @@
                 <div class="x_content">
                     <br>
                     <form action="{{ url('/attendance/addToClass') }}" method="post " id="add" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
-
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span></label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -27,6 +26,13 @@
                                         <option value="{{$classType->class_type_id}}">{{$classType->class_name}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12"for="barcode" ></label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="barcode" name="barcode" class="form-control col-md-7 col-xs-12" >
                             </div>
                         </div>
 
@@ -72,16 +78,23 @@
         *border-right-width: 2px;
         *border-bottom-width: 2px;
     }
+    #barcode {
+        pointer-events:none;
+        background-color: lightgrey;
+        opacity:.1;
+    }
 </style>
 
 <script type="text/javascript">
     $(function()
     {
+        $('#barcode').focus();
+        $('#class').val('1');
         $( "#name" ).autocomplete({
             source: "{{ url('search/autocomplete') }}",
             minLength: 3,
             select: function(event, ui) {
-                $('#name').val(ui.item.value).css('color','#ca0000');
+                $('#name').val(ui.item.value).css('color','green');
             }
         });
     });

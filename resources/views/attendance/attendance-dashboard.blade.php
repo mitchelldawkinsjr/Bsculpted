@@ -10,15 +10,7 @@
     <!-- page content -->
     <div class="right_col" role="main">
         <div class="row top_tiles">
-            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-female"></i></div>
-                    <div class="count">{{$totalClients}}</div>
-                    <h3>Total Clients</h3>
-                    <p>Sign Up More </p>
-                </div>
-            </div>
-            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-star"></i></div>
                     <div class="count">{{$totalClasses}}</div>
@@ -26,7 +18,7 @@
                     <p><?php echo date('F');?></p>
                 </div>
             </div>
-            <div class="animated flipInY col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="animated flipInY col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="tile-stats">
                     <div class="icon"><i class="fa fa-trophy"></i></div>
                     <div class="count">

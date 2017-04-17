@@ -13,7 +13,7 @@
             <br/>
             <br/>
 
-            <table id="attendance-table" class="display" cellspacing="0" width="100%">
+            <table id="attendance-table" class="display table-striped table-bordered dataTable" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th class="hide" rowspan="1" colspan="1" aria-label="" style="width: 16px;">Attendance_id</th>

@@ -26,6 +26,7 @@
                 <div class="clearfix"></div>
                 <h3>Modules</h3>
                 <ul class="nav side-menu">
+                    <li class=""><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home <!-- <span class="label label-success pull-right">Coming Soon</span>--></a></li>
                     <li>
                         <a><i class="fa fa-laptop"></i>Attendance<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
@@ -34,38 +35,14 @@
                             <li><a href="{{ url('/attendance/client-insert') }}">Client View</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a><i class="fa fa-female"></i>Clients<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{ url('/clients/dashboard') }}">Insert/Edit Clients</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-            {{--<div class="menu_section">--}}
-                {{--<h3>Group 2</h3>--}}
-                {{--<ul class="nav side-menu">--}}
-                    {{--<li>--}}
-                        {{--<a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>--}}
-                        {{--<ul class="nav child_menu">--}}
-                            {{--<li>--}}
-                                {{--<a href="#">Level One</a>--}}
-                                {{--<li>--}}
-                                    {{--<a>Level One<span class="fa fa-chevron-down"></span></a>--}}
-                                    {{--<ul class="nav child_menu">--}}
-                                        {{--<li class="sub_menu">--}}
-                                            {{--<a href="#">Level Two</a>--}}
-                                        {{--</li>--}}
-                                        {{--<li>--}}
-                                            {{--<a href="#">Level Two</a>--}}
-                                        {{--</li>--}}
-                                        {{--<li>--}}
-                                            {{--<a href="#">Level Two</a>--}}
-                                        {{--</li>--}}
-                                    {{--</ul>--}}
-                                {{--</li>--}}
-                            {{--<li>--}}
-                                {{--<a href="#">Level One</a>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                {{--</ul>--}}
-            </div>
-        
         </div>
         <!-- /sidebar menu -->
         

@@ -15,6 +15,7 @@
     <title>Bsculpted Dashboard</title>
 
     <script src="{{ asset("js/jquery.min.js") }}"></script>
+    <script src="{{ asset("js/beep.js") }}"></script>
 
     <!-- Bootstrap -->
     <link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet">
@@ -22,6 +23,8 @@
     <link href="{{ asset("css/font-awesome.min.css") }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{ asset("css/gentelella.min.css") }}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{{ asset("css/green.css") }}" rel="stylesheet">
 
     @stack('stylesheets')
 
@@ -29,7 +32,7 @@
 
 <body class="nav-md">
 <div class="container">
-    <div style="margin:0 15px 0 15px;" class="panel panel-default col-md-6 col-sm-11 col-xs-11 col-md-offset-3">
+    <div style="margin-top:20vh;" class="panel panel-default col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <div class="panel-body">
             @include('includes/sidebar2')
 

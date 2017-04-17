@@ -16,25 +16,20 @@ use Illuminate\Support\Facades\View;
 
 class SearchController
 {
-    public function autocomplete(){
-        if(Auth::check()){
-            $term = Input::get('term');
+    public function autocomplete()
+    {
+        $term = Input::get('term');
 
-            $results = array();
+        $results = array();
 
-            $queries = DB::table('clients')
-                ->where('first_nm', 'LIKE', '%'.$term.'%')
-                ->orWhere('last_nm', 'LIKE', '%'.$term.'%')
-                ->take(5)->get();
+        $queries = DB::table('clients')
+            ->where('first_nm', 'LIKE', '%' . $term . '%')
+            ->orWhere('last_nm', 'LIKE', '%' . $term . '%')
+            ->take(5)->get();
 
-            foreach ($queries as $query)
-            {
-                $results[] = [ 'id' => $query->client_id, 'value' => $query->first_nm.' '.$query->last_nm ];
-            }
-            return response()->json($results);
-        } else {
-            return View::make('errors.404');
+        foreach ($queries as $query) {
+            $results[] = ['id' => $query->client_id, 'value' => $query->first_nm . ' ' . $query->last_nm];
         }
-
+        return response()->json($results);
     }
 }

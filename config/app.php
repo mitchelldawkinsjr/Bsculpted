@@ -122,8 +122,6 @@ return [
     */
 
     'providers' => [
-        App\Providers\HelperServiceProvider::class,
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -148,7 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-	Illuminate\Notifications\NotificationServiceProvider::class,
+	    Illuminate\Notifications\NotificationServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -162,9 +160,13 @@ return [
         /*
          * Added for Bsculpted build
          */
+        Netshell\Paypal\PaypalServiceProvider::class,
+        App\Providers\HelperServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-	
-	Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class
+        Milon\Barcode\BarcodeServiceProvider::class,
+	    Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+//        Zjango\Curl\CurlServiceProvider::class
+        Ixudra\Curl\CurlServiceProvider::class
     ],
 
     /*
@@ -179,7 +181,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -188,7 +189,11 @@ return [
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
+//        'Curl'	=>	Zjango\Curl\Facades\Curl::class,
+        'Curl'	=>	Ixudra\Curl\CurlServiceProvider::class,
         'DB' => Illuminate\Support\Facades\DB::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
@@ -198,6 +203,7 @@ return [
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Password' => Illuminate\Support\Facades\Password::class,
+        'Paypal' => Netshell\Paypal\Facades\Paypal::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
         'Redis' => Illuminate\Support\Facades\Redis::class,
@@ -212,8 +218,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-	'Notification' => Illuminate\Support\Facades\Notification::class,
-	'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class
+	    'Notification' => Illuminate\Support\Facades\Notification::class,
+	    'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class
     ],
 
 ];

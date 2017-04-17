@@ -11,7 +11,6 @@
             <div style="text-align: center;">
                 <span class="chart" >
                     <p>Added: {{$name}} <br/><br/> To {{$class}} <br/><br/> On {{$date}} </p>
-                    {{--<canvas height="110" width="110"></canvas>--}}
                 </span>
             </div>
 
